@@ -32,18 +32,33 @@ public abstract class Sprite
   {
     newPosition = new position(x,y);
   }
-  public setVelocity(Vector2 newVelocity)
+  public void setVelocity(Vector2 newVelocity)
   {
-    newVelocity = new velocity (x,y);
+    velocity = newVelocity;
   }
   public Vector2 getPosition()
   {
-    float delX = getPosition.x-position.x;
-    float delY = getPosition.y - position.y;
+    return position;
   }
   public Vector2 getVelocity()
   {
-    float delX = getVelocity.x-velocity.x;
-    float delY = getVelocity.y - velocity.y;
+    return velocity;
+  }
+  void followMouse()
+  {
+    float speed = velocity.mag();//sqrt(dx*dx + dy*dy);
+    Vector2 mLoc = new Vector2(mouseX, mouseY);
+    Vector2 mDir = mLoc.subtract(position);
+    //float delX = mouseX - this.x;
+    //float delY = mouseY - this.y;
+    //float mag = sqrt(delX*delX + delY*delY);
+    position = position.add(mDir.unitVector().scale(speed));
+    //if(delX != 0) x += (delX/mag) * speed;
+    //if(delY != 0) y += (delY/mag) * speed;
+  }
+  public float distanceTo(Sprite other)
+  {
+    Vector2 diff = other.position.subtract(this.position);
+    return diff.mag();
   }
 }
