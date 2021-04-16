@@ -5,14 +5,12 @@ class Star extends Sprite implements ICollisionBox
    protected float r;
    public Star(float x, float y, float r)
    {
-     position = new Vector2(x,y);
-     velocity = new Vector(0,0);
+     super(x,y);
      this.r = r;
    }
    public Star(float x, float y, float dx, float dy, float r)
    {
-     position = new Vector2(x,y);
-     velocity = new Vector(0,0);
+     super(x,y,dx,dy);
      this.r = r;
    }
    boolean collidesWith(ICollisionBox other)
@@ -20,7 +18,12 @@ class Star extends Sprite implements ICollisionBox
      float distance = this.position.subtract(other.getPosition()).mag();
      return distance < this.radius + other.getRadius();
    }
-   public void draw()
+   float getRadius()
+   {
+     return r;
+   }
+   
+   public void drawSprite()
    {
      fill(#37D5FF);
      noStroke();

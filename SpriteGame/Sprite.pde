@@ -10,9 +10,14 @@ public abstract class Sprite
     position = new Vector2(x,y);
     velocity = new Vector2(0,0);
   }
+  public Sprite(float x, float y, float dx, float dy)
+  {
+    position = new Vector2(x,y);
+    velocity = new Vector2(dx,dy);
+  }
   public Sprite(Vector2 s)
   {
-    position = new Vector2(100,100);
+    position = s;
     velocity = new Vector2(0,0);
   }
   public Sprite(Vector2 s, Vector2 v)
@@ -20,17 +25,15 @@ public abstract class Sprite
     position = new Vector2(100,100);
     velocity = new Vector2(20,40);
   }
-  public abstract void drawSprite();
-  {
-    
-  }
+  public abstract void drawSprite(); {}
+  
   public void move()
   {
     position = position.add(velocity);
   }
   public void moveTo(Vector2 newPosition)
   {
-    newPosition = new position(x,y);
+    position = newPosition;
   }
   public void setVelocity(Vector2 newVelocity)
   {
@@ -60,5 +63,24 @@ public abstract class Sprite
   {
     Vector2 diff = other.position.subtract(this.position);
     return diff.mag();
+  }
+  public void keyboardControl()
+  {
+    if(keyCode == UP)
+    {
+      velocity = new Vector2(0,-2);
+    }
+    if(keyCode == DOWN)
+    {
+      velocity = new Vector2(0,2);
+    }
+    if(keyCode == LEFT)
+    {
+      velocity = new Vector2(-2,0);
+    }
+    if(keyCode == RIGHT)
+    {
+      velocity = new Vector2(2,0);
+    }
   }
 }

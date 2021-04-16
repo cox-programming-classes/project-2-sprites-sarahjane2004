@@ -39,8 +39,7 @@
   // Compute |this| the Magnitude (length) of this vector.
   public float mag()
   {
-    float magnitude = sqrt((x*x) + (y*y));
-    return magnitude;
+    return sqrt((x*x) + (y*y));
   }
   
   // Compute the Dot Product this*other

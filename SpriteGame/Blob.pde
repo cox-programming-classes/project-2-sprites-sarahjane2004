@@ -6,8 +6,6 @@ class Blob extends Sprite implements ICollisionBox
   Blob(float x, float y, float r, color c)
   {
     super(x,y);
-    this.dx = 0;
-    this.dy = 0;
     myColor = c;
     radius = r;
   }
@@ -45,6 +43,10 @@ public class Block extends Blob
       super(x,y,0,c);
       this.w = abs(w);
       this.h = abs(h);
+    }
+    float getRadius()
+    {
+      return .5 * sqrt(w*w + h*h);
     }
     void drawSprite()
     {
