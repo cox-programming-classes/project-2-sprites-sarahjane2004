@@ -20,6 +20,16 @@ class Blob extends Sprite implements ICollisionBox
   {
     fill(myColor);
     ellipse(position.x, position.y, 2*radius, 2*radius);
+
+    ellipse(position.x + width, position.y, 2*radius, 2*radius);
+    ellipse(position.x - width, position.y, 2*radius, 2*radius);
+    ellipse(position.x, position.y + height, 2*radius, 2*radius);
+    ellipse(position.x, position.y - height, 2*radius, 2*radius);
+    
+    ellipse(position.x + width, position.y + height, 2*radius, 2*radius);
+    ellipse(position.x + width, position.y - height, 2*radius, 2*radius);
+    ellipse(position.x - width, position.y + height, 2*radius, 2*radius);
+    ellipse(position.x - width, position.y - height, 2*radius, 2*radius);
   }
   
   boolean collidesWith(ICollisionBox other)

@@ -37,8 +37,10 @@ class Star extends Sprite implements ICollisionBox
     Vector2 v8 = v6.rotate(2*PI/5);
     Vector2 v9 = v7.rotate(2*PI/5);
     Vector2 v10 = v8.rotate(2*PI/5);
+    
     beginShape();
-    vertex(position.add(v).x, position.add(v).y);
+    vertex(position.add(v).x + width, position.add(v).y + height);
+    vertex(position.add(v).x - width, position.add(v).y - height);
     vertex(position.add(v2).x, position.add(v2).y);
     vertex(position.add(v3).x, position.add(v3).y);
     vertex(position.add(v4).x, position.add(v4).y);
@@ -49,5 +51,132 @@ class Star extends Sprite implements ICollisionBox
     vertex(position.add(v9).x, position.add(v9).y);
     vertex(position.add(v10).x, position.add(v10).y);
     endShape();
+    
+    beginShape();
+    vertex(position.add(v).x, position.add(v).y);
+    vertex(position.add(v2).x + width, position.add(v2).y + height);
+     vertex(position.add(v2).x - width, position.add(v2).y - height);
+    vertex(position.add(v3).x, position.add(v3).y);
+    vertex(position.add(v4).x, position.add(v4).y);
+    vertex(position.add(v5).x, position.add(v5).y);
+    vertex(position.add(v6).x, position.add(v6).y);
+    vertex(position.add(v7).x, position.add(v7).y);
+    vertex(position.add(v8).x, position.add(v8).y);
+    vertex(position.add(v9).x, position.add(v9).y);
+    vertex(position.add(v10).x, position.add(v10).y);
+    endShape();
+    
+    beginShape();
+    vertex(position.add(v).x, position.add(v).y);
+    vertex(position.add(v2).x, position.add(v2).y);
+    vertex(position.add(v3).x + width, position.add(v3).y + height);
+     vertex(position.add(v3).x - width, position.add(v3).y - height);
+    vertex(position.add(v4).x, position.add(v4).y);
+    vertex(position.add(v5).x, position.add(v5).y);
+    vertex(position.add(v6).x, position.add(v6).y);
+    vertex(position.add(v7).x, position.add(v7).y);
+    vertex(position.add(v8).x, position.add(v8).y);
+    vertex(position.add(v9).x, position.add(v9).y);
+    vertex(position.add(v10).x, position.add(v10).y);
+    endShape();
+    
+    beginShape();
+    vertex(position.add(v).x, position.add(v).y);
+    vertex(position.add(v2).x, position.add(v2).y);
+    vertex(position.add(v3).x, position.add(v3).y);
+    vertex(position.add(v4).x + width, position.add(v4).y + height);
+    vertex(position.add(v4).x - width, position.add(v4).y - height);
+    vertex(position.add(v5).x, position.add(v5).y);
+    vertex(position.add(v6).x, position.add(v6).y);
+    vertex(position.add(v7).x, position.add(v7).y);
+    vertex(position.add(v8).x, position.add(v8).y);
+    vertex(position.add(v9).x, position.add(v9).y);
+    vertex(position.add(v10).x, position.add(v10).y);
+    endShape();
+    
+    beginShape();
+    vertex(position.add(v).x, position.add(v).y);
+    vertex(position.add(v2).x, position.add(v2).y);
+    vertex(position.add(v3).x, position.add(v3).y);
+    vertex(position.add(v4).x, position.add(v4).y);
+    vertex(position.add(v5).x + width, position.add(v5).y + height);
+    vertex(position.add(v5).x - width, position.add(v5).y - height);
+    vertex(position.add(v6).x, position.add(v6).y);
+    vertex(position.add(v7).x, position.add(v7).y);
+    vertex(position.add(v8).x, position.add(v8).y);
+    vertex(position.add(v9).x, position.add(v9).y);
+    vertex(position.add(v10).x, position.add(v10).y);
+    endShape();
+    
+    beginShape();
+    vertex(position.add(v).x, position.add(v).y);
+    vertex(position.add(v2).x, position.add(v2).y);
+    vertex(position.add(v3).x, position.add(v3).y);
+    vertex(position.add(v4).x, position.add(v4).y);
+    vertex(position.add(v5).x, position.add(v5).y);
+    vertex(position.add(v6).x + width, position.add(v6).y + height);
+    vertex(position.add(v6).x - width, position.add(v6).y - height);
+    vertex(position.add(v7).x, position.add(v7).y);
+    vertex(position.add(v8).x, position.add(v8).y);
+    vertex(position.add(v9).x, position.add(v9).y);
+    vertex(position.add(v10).x, position.add(v10).y);
+    endShape();
+    
+    beginShape();
+    vertex(position.add(v).x, position.add(v).y);
+    vertex(position.add(v2).x, position.add(v2).y);
+    vertex(position.add(v3).x, position.add(v3).y);
+    vertex(position.add(v4).x, position.add(v4).y);
+    vertex(position.add(v5).x, position.add(v5).y);
+    vertex(position.add(v6).x, position.add(v6).y);
+    vertex(position.add(v7).x + width, position.add(v7).y + height);
+    vertex(position.add(v7).x - width, position.add(v7).y - height);
+    vertex(position.add(v8).x, position.add(v8).y);
+    vertex(position.add(v9).x, position.add(v9).y);
+    vertex(position.add(v10).x, position.add(v10).y);
+    endShape();
+    
+    beginShape();
+    vertex(position.add(v).x, position.add(v).y);
+    vertex(position.add(v2).x, position.add(v2).y);
+    vertex(position.add(v3).x, position.add(v3).y);
+    vertex(position.add(v4).x, position.add(v4).y);
+    vertex(position.add(v5).x, position.add(v5).y);
+    vertex(position.add(v6).x, position.add(v6).y);
+    vertex(position.add(v7).x, position.add(v7).y);
+    vertex(position.add(v8).x + width, position.add(v8).y + height);
+    vertex(position.add(v8).x - width, position.add(v8).y - height);
+    vertex(position.add(v9).x, position.add(v9).y);
+    vertex(position.add(v10).x, position.add(v10).y);
+    endShape();
+    
+    beginShape();
+    vertex(position.add(v).x, position.add(v).y);
+    vertex(position.add(v2).x, position.add(v2).y);
+    vertex(position.add(v3).x, position.add(v3).y);
+    vertex(position.add(v4).x, position.add(v4).y);
+    vertex(position.add(v5).x, position.add(v5).y);
+    vertex(position.add(v6).x, position.add(v6).y);
+    vertex(position.add(v7).x, position.add(v7).y);
+    vertex(position.add(v8).x, position.add(v8).y);
+    vertex(position.add(v9).x + width, position.add(v9).y + height);
+    vertex(position.add(v9).x - width, position.add(v9).y - height);
+    vertex(position.add(v10).x, position.add(v10).y);
+    endShape();
+    
+    beginShape();
+    vertex(position.add(v).x, position.add(v).y);
+    vertex(position.add(v2).x, position.add(v2).y);
+    vertex(position.add(v3).x, position.add(v3).y);
+    vertex(position.add(v4).x, position.add(v4).y);
+    vertex(position.add(v5).x, position.add(v5).y);
+    vertex(position.add(v6).x, position.add(v6).y);
+    vertex(position.add(v7).x, position.add(v7).y);
+    vertex(position.add(v8).x, position.add(v8).y);
+    vertex(position.add(v9).x, position.add(v9).y);
+    vertex(position.add(v10).x + width, position.add(v10).y + height);
+    vertex(position.add(v10).x - width, position.add(v10).y - height);
+    endShape();
+    
    }
 }
