@@ -1,7 +1,7 @@
-class Player extends Sprite
-{
-  public abstract void drawSprite()
-  {
+//class Player extends Sprite
+//{
+//  public abstract void drawSprite()
+//  {
     
-  }
-}
+//  }
+//}

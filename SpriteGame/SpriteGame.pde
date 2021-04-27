@@ -4,8 +4,6 @@ ArrayList <ICollisionBox> collidingObjects;
 Blob blob;
 Block block;
 Sprite sprite;
-Enemy enemy;
-Player player;
 Star star;
 
 void setup()

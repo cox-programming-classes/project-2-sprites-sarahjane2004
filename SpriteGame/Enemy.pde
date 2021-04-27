@@ -1,7 +1,7 @@
-class Enemy extends Sprite
-{
-  public abstract void drawSprite()
-  {
+//class Enemy extends Sprite
+//{
+//  public abstract void drawSprite()
+//  {
     
-  }
-}
+//  }
+//}
