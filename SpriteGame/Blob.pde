@@ -3,6 +3,21 @@ class Blob extends Sprite implements ICollisionBox
   protected float radius;
   protected color myColor;
   
+  public Event onCollision;
+  
+  void onCollisionWith(Sprite other)
+  {
+    // if the sprite is also a blob 
+    if(other instanceof Blob)
+    {
+      color temp = myColor;
+      myColor = ((Blob)other).myColor;
+      ((Blob)other).myColor = temp;
+    }
+  }
+  
+  onCollision.trigger(this, other);
+  
   Blob(float x, float y, float r, color c)
   {
     super(x,y);

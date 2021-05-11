@@ -24,6 +24,7 @@ void checkCollisions()
 {
   for(int i = 0; i < collidingObjects.size(); i++)
   {
+    ICollisionBox obj = collidingObjects.get(i);
     for(int j = i+1; j< collidingObjects.size(); j++)
     {
       ICollisionBox obj2 = collidingObjects.get(j);
